@@ -1,27 +1,28 @@
 import React, { useState } from "react";
 import "antd/dist/antd.min.css";
 import { Typography, Anchor, Button, Form, Input, Col, Row} from "antd";
-import './../../src/style/login.scss'
+import './../../src/style/signup.scss'
 
 const { Title } = Typography;
 const { Link } = Anchor;
 
-const LogIn = () => {
+const SignUp = () => {
   const handleSubmitForm = () => {
   };
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const handleChangeEmail = (e: any) => {
-    setEmail(e?.target?.value)
+  const handleChangeUserName = () => {
+
   }
-  const handleChangePassword = (e: any) => {
-    setPassword(e?.target?.value)
+  const handleChangeEmail = () => {
+
+  }
+  const handleChangePassword = () => {
+
   }
   return (
-    <div className="wrap-login container">
-      <Title className="login-title">Sign In Page</Title>
+    <div className="wrap-signup container">
+      <Title className="login-title">Sign Up</Title>
       <Anchor>
-        <Link className="login-link" href="#components-anchor-demo-basic" title="Need a account ?" />
+        <Link className="login-link" href="#components-anchor-demo-basic" title="Have an account ?" />
       </Anchor>
       <Row>
         <Col span={10} offset={7}>
@@ -33,6 +34,26 @@ const LogIn = () => {
             onFinish={handleSubmitForm}
             autoComplete="off"
           >
+            <Form.Item
+              name="User name"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your user name!",
+                },
+              ]}
+            >
+              <Input
+                style={{
+                  fontWeight: 700,
+                  color: "#999999",
+                  fontSize: "16px",
+                  height: "51px",
+                }}
+                placeholder="Please input user name"
+                onChange={handleChangeUserName}
+              ></Input>
+            </Form.Item>
             <Form.Item
               name="email"
               rules={[
@@ -57,7 +78,15 @@ const LogIn = () => {
                 onChange={handleChangeEmail}
               ></Input>
             </Form.Item>
-            <Form.Item>
+            <Form.Item
+              name="email"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your password",
+                },
+              ]}
+            >
               <Input.Password
                 style={{
                   fontWeight: 700,
@@ -76,4 +105,4 @@ const LogIn = () => {
     </div>
   );
 };
-export default LogIn;
+export default SignUp;

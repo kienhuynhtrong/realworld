@@ -10,9 +10,9 @@ interface IProps {
 const rightTabNav = () => {
   return (
     <ul className='wrap-header__right'>
-      <li className='wrap-header__items'>Home</li>
-      <li className='wrap-header__items'>Sign In</li>
-      <li className='wrap-header__items'>Sign Up</li>
+      <Link to="/" className='wrap-header__items'>Home</Link>
+      <Link to="/login" className='wrap-header__items'>Sign In</Link>
+      <Link to="/signup" className='wrap-header__items'>Sign Up</Link>
     </ul>
   )
 }
