@@ -1,0 +1,27 @@
+.wrap-header {
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  &__right {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &__items {
+    color: rgba(0,0,0,.3);
+    font-size: 16px;
+    margin-left: 16px;
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+  &__logo-icon {
+    font-family: titillium web,sans-serif;
+    font-size: 1.5rem!important;
+    padding-top: 0!important;
+    margin-right: 2rem!important;
+    color: #5cb85c!important;
+  }
+}
